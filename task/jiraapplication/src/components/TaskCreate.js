@@ -1,42 +1,46 @@
-import {useState} from "react"
+import { useState } from "react";
 
-function TaskCreate({onCreate}) {
+function TaskCreate({ onCreate }) {
+  const [title, setTitle] = useState("");
+  const [taskDesc, setTaskDesc] = useState("");
 
-    const [title, setTitle] = useState('');
-    const [taskDesc, setTaskDesc] = useState('');
+  console.log(title, taskDesc);
 
-    console.log(title, taskDesc);
+  const handleChange = (event) => {
+    setTitle(event.target.value);
+  };
 
+  const handleTaskChange = (event) => {
+    setTaskDesc(event.target.value);
+  };
 
-    const handleChange = (event) => {
-        setTitle(event.target.value);
-    }
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    onCreate(title, taskDesc);
+  };
 
-    const handleTaskChange = (event) => {
-        setTaskDesc(event.target.value);
-    }
+  return (
+    <div className="task-create">
+      <h3>Lütfen task ekleyiniz</h3>
+      <form className="task-form">
+        <label className="task-label"> Başlık</label>
+        <input value={title} className="task-input" onChange={handleChange} />
 
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        onCreate(title, taskDesc );
-    }
+        <label className="task-label"> Task Giriniz!</label>
+        <textarea
+          value={taskDesc}
+          onChange={handleTaskChange}
+          className="task-input"
+          rows="5"
+        />
 
-    
-
-    return <div className="task-create">
-        <h3>Lütfen task ekleyiniz</h3>
-        <form className="task-form">
-            <label className="task-label"> Başlık</label>
-            <input value={title} className="task-input" onChange={handleChange}/>
-
-            <label className="task-label"> Task Giriniz!</label>
-            <textarea value={taskDesc} onChange={handleTaskChange} className="task-input" rows="5"/>
-
-            <button className="task-button" onClick={handleSubmit}> Oluştur</button>
-        </form>
-    </div>;
+        <button className="task-button" onClick={handleSubmit}>
+          {" "}
+          Oluştur
+        </button>
+      </form>
+    </div>
+  );
 }
 
 export default TaskCreate;
-
-
