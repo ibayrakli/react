@@ -1,3 +1,8 @@
+# jiraaplication notes
+
+json-server --watch api/db.json
+Set-ExecutionPolicy Unrestricted
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
