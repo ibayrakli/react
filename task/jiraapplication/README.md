@@ -1,6 +1,6 @@
 # jiraaplication notes
 
-json-server --watch api/db.json
+json-server --watch api/db.json --port 3004
 Set-ExecutionPolicy Unrestricted
 
 # Getting Started with Create React App
