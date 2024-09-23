@@ -1,6 +1,11 @@
 import { useState } from "react";
 
-function TaskCreate({ onCreate, task, taskFormUpdate, onUpdate }) {
+import { useContext } from "react";
+import TasksContext from "../context/task";
+
+function TaskCreate({ task, taskFormUpdate, onUpdate }) {
+  const { createTask } = useContext(TasksContext);
+
   const [title, setTitle] = useState(task ? task.title : "");
   const [taskDesc, setTaskDesc] = useState(task ? task.taskDesc : "");
 
@@ -16,8 +21,10 @@ function TaskCreate({ onCreate, task, taskFormUpdate, onUpdate }) {
     event.preventDefault();
     if (taskFormUpdate) {
       onUpdate(task.id, title, taskDesc);
+      // editTaskById(task.id, title, taskDesc);
     } else {
-      onCreate(title, taskDesc);
+      // onCreate(title, taskDesc);
+      createTask(title, taskDesc);
     }
 
     setTitle("");
