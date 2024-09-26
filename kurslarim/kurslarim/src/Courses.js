@@ -7,6 +7,31 @@ function Courses({ courses, removeCourse }) {
 
   const { content, title, price } = courses[index];
 
+  const checkIndex = (index) => {
+    if (index < 0) {
+      return courses.length - 1;
+    }
+
+    if (index > courses.length - 1) {
+      return 0;
+    }
+    return index;
+  };
+
+  const prevCourse = () => {
+    setIndex((index) => {
+      let newIndex = index - 1;
+      return checkIndex(newIndex);
+    });
+  };
+
+  const nextCourse = () => {
+    setIndex((index) => {
+      let newIndex = index + 1;
+      return checkIndex(newIndex);
+    });
+  };
+
   return (
     <div className="courseMainDiv">
       <div>
@@ -14,7 +39,7 @@ function Courses({ courses, removeCourse }) {
       </div>
 
       <div className="cardDiv">
-        <button className="prevNextBtn">
+        <button className="prevNextBtn" onClick={prevCourse}>
           <FaChevronLeft />
         </button>
         <div className="card">
@@ -25,7 +50,7 @@ function Courses({ courses, removeCourse }) {
           <p>{content}</p>
         </div>
 
-        <button className="prevNextBtn">
+        <button className="prevNextBtn" onClick={nextCourse}>
           <FaChevronRight />
         </button>
 
