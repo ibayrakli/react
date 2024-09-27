@@ -34,8 +34,9 @@ function Courses({ courses, removeCourse }) {
 
   return (
     <div className="courseMainDiv">
-      <div>
+      <div className="courseTitleAndButton">
         <h2>Kurslarım</h2>
+        <button className="cardDeleteBtn">Rasgele Kurs Ata</button>
       </div>
 
       <div className="cardDiv">
