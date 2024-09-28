@@ -1,9 +1,26 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useCallback } from "react";
 import "./App.css";
+import NumberList from "./NumberList";
 
 function App() {
-  const [number, setNumber] = useState(0);
+  const [number, setNumber] = useState(1);
+  // const [number, setNumber] = useState(0);
   const [dark, setDark] = useState(false);
+
+  // const getItems = () => {
+  //   return [number, number + 1, number + 2];
+  // };
+
+  const getItems = useCallback(
+    (incrementValue) => {
+      return [
+        number + incrementValue,
+        number + 1 + incrementValue,
+        number + 2 + incrementValue,
+      ];
+    },
+    [number]
+  );
 
   const doubleNumber = useMemo(() => {
     return slowFunc(number);
@@ -15,17 +32,23 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <div style={theme}>
       <>
         <input
           type="number"
           value={number}
           onChange={(e) => setNumber(parseInt(e.target.value))}
         />
+        {/* <input
+          type="number"
+          value={number}
+          onChange={(e) => setNumber(parseInt(e.target.value))}
+        /> */}
         <button onClick={() => setDark((prevDark) => !prevDark)}>
           Temayı Değiştir
         </button>
-        <div style={theme}>{doubleNumber}</div>
+        <NumberList getItems={getItems} />
+        {/* <div style={theme}>{doubleNumber}</div> */}
       </>
     </div>
   );
