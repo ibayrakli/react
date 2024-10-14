@@ -31,7 +31,7 @@ export const advancedSchema = yup.object().shape({
     .required("Kullanıcı adı zorunludur"),
   university: yup
     .string()
-    .oneOf(["bogazici", "gsu", "odtü", "itü"], "Lütfen üniversitenizi seçiniz")
+    .oneOf(["bogazici", "gsu", "odtu", "itu"], "Lütfen üniversitenizi seçiniz")
     .required("Lütfen üniversitenizi seçiniz"),
   isAccepted: yup.boolean().oneOf([true], "Kulanım koşullarını kabul ediniz"),
 });
