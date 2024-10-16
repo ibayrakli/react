@@ -28,3 +28,16 @@ function display(id, name) {
 // console.log(desc2);
 var isPresent = false;
 console.log(isPresent);
+var firstNames = ["X", "Y", "Z"];
+//let firstNames: Array<string> = ["X", "Y", "Z"];
+console.log(firstNames);
+var arr = [1, 3, "Apple", "Orange", "Banana", true, false];
+var ids;
+ids = [23, 34, 100, 44];
+// let values: (string | number)[] = ["Apple", 2, "Banana"];
+var values = ["Apple", 2, "Banana"];
+var fruits;
+fruits = ["Apple", "Orange", "Banana"];
+for (var i = 0; i < fruits.length; i++) {
+    console.log(fruits[i]);
+}

@@ -38,3 +38,24 @@ function display(id: number, name: string) {
 
 let isPresent: boolean = false;
 console.log(isPresent);
+
+let firstNames: string[] = ["X", "Y", "Z"];
+//let firstNames: Array<string> = ["X", "Y", "Z"];
+
+console.log(firstNames);
+
+let arr = [1, 3, "Apple", "Orange", "Banana", true, false];
+
+let ids: Array<number>;
+ids = [23, 34, 100, 44];
+
+// let values: (string | number)[] = ["Apple", 2, "Banana"];
+
+let values: Array<string | number> = ["Apple", 2, "Banana"];
+
+let fruits: Array<string>;
+fruits = ["Apple", "Orange", "Banana"];
+
+for (let i = 0; i < fruits.length; i++) {
+  console.log(fruits[i]);
+}
