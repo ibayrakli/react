@@ -41,3 +41,16 @@ fruits = ["Apple", "Orange", "Banana"];
 for (var i = 0; i < fruits.length; i++) {
     console.log(fruits[i]);
 }
+var id = 1;
+var instructorName = "DenemeIns";
+var instructor = [2, "Denem2"];
+var user;
+user = [1, "Deneme", true, 20, "Admin"];
+console.log(instructor, user);
+var employee;
+employee = [
+    [1, "A"],
+    [2, "B"],
+    [3, "C"],
+];
+console.log(employee);
