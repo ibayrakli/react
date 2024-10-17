@@ -79,35 +79,55 @@ function display(id: number, name: string) {
 
 // console.log(employee);
 
-type Person = {
-  firstName: string;
-  lastName: string;
-  age: number;
-  jobTitle: string;
-};
+// type Person = {
+//   firstName: string;
+//   lastName: string;
+//   age: number;
+//   jobTitle: string;
+// };
 
-let instructor: Person;
+// let instructor: Person;
 
-instructor = {
-  firstName: "Name",
-  lastName: "LastName",
-  age: 13,
-  jobTitle: "Software Instructor",
-};
+// instructor = {
+//   firstName: "Name",
+//   lastName: "LastName",
+//   age: 13,
+//   jobTitle: "Software Instructor",
+// };
 
-let person: {
-  firstName: string;
-  lastName: string;
-  age: number;
-  jobTitle: string;
-};
+// let person: {
+//   firstName: string;
+//   lastName: string;
+//   age: number;
+//   jobTitle: string;
+// };
 
-person = {
-  firstName: "Name",
-  lastName: "LastName",
-  age: 13,
-  jobTitle: "Software Instructor",
-};
+// person = {
+//   firstName: "Name",
+//   lastName: "LastName",
+//   age: 13,
+//   jobTitle: "Software Instructor",
+// };
 
-console.log(instructor.age);
-console.log(person);
+// console.log(instructor.age);
+// console.log(person);
+
+enum Media {
+  Newspaper = 1,
+  Newsletter,
+  Magazine,
+  Book,
+}
+
+// console.log(Media.Magazine);
+console.log(Media[1]);
+
+enum PrintMedia {
+  Newspaper = "NEWSPAPER",
+  Newsletter = "NEWSLETTER",
+  Magazine = "MAGAZINE",
+  Book = "BOOK",
+}
+
+// console.log(PrintMedia.Newsletter);
+// console.log(PrintMedia["Book"]);
