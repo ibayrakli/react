@@ -81,21 +81,23 @@ function display(id, name) {
 // };
 // console.log(instructor.age);
 // console.log(person);
-var Media;
-(function (Media) {
-    Media[Media["Newspaper"] = 1] = "Newspaper";
-    Media[Media["Newsletter"] = 2] = "Newsletter";
-    Media[Media["Magazine"] = 3] = "Magazine";
-    Media[Media["Book"] = 4] = "Book";
-})(Media || (Media = {}));
-// console.log(Media.Magazine);
-console.log(Media[1]);
-var PrintMedia;
-(function (PrintMedia) {
-    PrintMedia["Newspaper"] = "NEWSPAPER";
-    PrintMedia["Newsletter"] = "NEWSLETTER";
-    PrintMedia["Magazine"] = "MAGAZINE";
-    PrintMedia["Book"] = "BOOK";
-})(PrintMedia || (PrintMedia = {}));
-// console.log(PrintMedia.Newsletter);
-// console.log(PrintMedia["Book"]);
+// enum Media {
+//   Newspaper = 1,
+//   Newsletter,
+//   Magazine,
+//   Book,
+// }
+// // console.log(Media.Magazine);
+// console.log(Media[1]);
+// enum PrintMedia {
+//   Newspaper = "NEWSPAPER",
+//   Newsletter = "NEWSLETTER",
+//   Magazine = "MAGAZINE",
+//   Book = "BOOK",
+// }
+// // console.log(PrintMedia.Newsletter);
+// // console.log(PrintMedia["Book"]);
+var code;
+// code = 123;
+code = false;
+console.log(code);

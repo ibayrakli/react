@@ -112,22 +112,29 @@ function display(id: number, name: string) {
 // console.log(instructor.age);
 // console.log(person);
 
-enum Media {
-  Newspaper = 1,
-  Newsletter,
-  Magazine,
-  Book,
-}
+// enum Media {
+//   Newspaper = 1,
+//   Newsletter,
+//   Magazine,
+//   Book,
+// }
 
-// console.log(Media.Magazine);
-console.log(Media[1]);
+// // console.log(Media.Magazine);
+// console.log(Media[1]);
 
-enum PrintMedia {
-  Newspaper = "NEWSPAPER",
-  Newsletter = "NEWSLETTER",
-  Magazine = "MAGAZINE",
-  Book = "BOOK",
-}
+// enum PrintMedia {
+//   Newspaper = "NEWSPAPER",
+//   Newsletter = "NEWSLETTER",
+//   Magazine = "MAGAZINE",
+//   Book = "BOOK",
+// }
 
-// console.log(PrintMedia.Newsletter);
-// console.log(PrintMedia["Book"]);
+// // console.log(PrintMedia.Newsletter);
+// // console.log(PrintMedia["Book"]);
+
+let code: string | number | boolean;
+
+// code = 123;
+
+code = false;
+console.log(code);
