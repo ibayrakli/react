@@ -36,45 +36,78 @@ function display(id: number, name: string) {
 // console.log(desc1);
 // console.log(desc2);
 
-let isPresent: boolean = false;
-console.log(isPresent);
+// let isPresent: boolean = false;
+// console.log(isPresent);
 
-let firstNames: string[] = ["X", "Y", "Z"];
-//let firstNames: Array<string> = ["X", "Y", "Z"];
+// let firstNames: string[] = ["X", "Y", "Z"];
+// //let firstNames: Array<string> = ["X", "Y", "Z"];
 
-console.log(firstNames);
+// console.log(firstNames);
 
-let arr = [1, 3, "Apple", "Orange", "Banana", true, false];
+// let arr = [1, 3, "Apple", "Orange", "Banana", true, false];
 
-let ids: Array<number>;
-ids = [23, 34, 100, 44];
+// let ids: Array<number>;
+// ids = [23, 34, 100, 44];
 
-// let values: (string | number)[] = ["Apple", 2, "Banana"];
+// // let values: (string | number)[] = ["Apple", 2, "Banana"];
 
-let values: Array<string | number> = ["Apple", 2, "Banana"];
+// let values: Array<string | number> = ["Apple", 2, "Banana"];
 
-let fruits: Array<string>;
-fruits = ["Apple", "Orange", "Banana"];
+// let fruits: Array<string>;
+// fruits = ["Apple", "Orange", "Banana"];
 
-for (let i = 0; i < fruits.length; i++) {
-  console.log(fruits[i]);
-}
+// for (let i = 0; i < fruits.length; i++) {
+//   console.log(fruits[i]);
+// }
 
-let id: number = 1;
-let instructorName: string = "DenemeIns";
+// let id: number = 1;
+// let instructorName: string = "DenemeIns";
 
-let instructor: [number, string] = [2, "Denem2"];
+// let instructor: [number, string] = [2, "Denem2"];
 
-var user: [number, string, boolean, number, string];
-user = [1, "Deneme", true, 20, "Admin"];
+// var user: [number, string, boolean, number, string];
+// user = [1, "Deneme", true, 20, "Admin"];
 
-console.log(instructor, user);
+// console.log(instructor, user);
 
-let employee: [number, string][];
-employee = [
-  [1, "A"],
-  [2, "B"],
-  [3, "C"],
-];
+// let employee: [number, string][];
+// employee = [
+//   [1, "A"],
+//   [2, "B"],
+//   [3, "C"],
+// ];
 
-console.log(employee);
+// console.log(employee);
+
+type Person = {
+  firstName: string;
+  lastName: string;
+  age: number;
+  jobTitle: string;
+};
+
+let instructor: Person;
+
+instructor = {
+  firstName: "Name",
+  lastName: "LastName",
+  age: 13,
+  jobTitle: "Software Instructor",
+};
+
+let person: {
+  firstName: string;
+  lastName: string;
+  age: number;
+  jobTitle: string;
+};
+
+person = {
+  firstName: "Name",
+  lastName: "LastName",
+  age: 13,
+  jobTitle: "Software Instructor",
+};
+
+console.log(instructor.age);
+console.log(person);
