@@ -165,19 +165,33 @@ function display(id: number, name: string) {
 
 // let something: void | null = null;
 
-let sayac = 0;
-console.log(typeof sayac);
+// let sayac = 0;
+// console.log(typeof sayac);
 
-function increment(counter: number): number {
-  return counter++;
+// function increment(counter: number): number {
+//   return counter++;
+// }
+
+// // let a = "something";
+// // let b = 123;
+// // a = b;
+
+// function sum(a: number, b: number) {
+//   return a + b;
+// }
+
+// let total: number = sum(3, 10);
+
+// let code: any = 123;
+// let empCode = <number>code;
+// console.log(typeof empCode);
+
+interface Employee {
+  name: string;
+  code: number;
 }
 
-// let a = "something";
-// let b = 123;
-// a = b;
-
-function sum(a: number, b: number) {
-  return a + b;
-}
-
-let total: number = sum(3, 10);
+let employee = <Employee>{};
+console.log(typeof employee);
+employee.name = "Name";
+console.log(employee);
