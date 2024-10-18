@@ -101,13 +101,17 @@ function display(id, name) {
 // // code = 123;
 // code = false;
 // console.log(code);
-var something = "Hello";
-something = 45;
-something = true;
-something = {
-    firstName: "Namee",
-    lastName: "Lastname",
-};
-console.log(something);
-var arr = ["John", 21, true];
-console.log(arr);
+// let something: any = "Hello";
+// something = 45;
+// something = true;
+// something = {
+//   firstName: "Namee",
+//   lastName: "Lastname",
+// };
+// console.log(something);
+// let arr: any[] = ["John", 21, true];
+// console.log(arr);
+function sayHello() {
+    console.log("Hi");
+}
+sayHello();

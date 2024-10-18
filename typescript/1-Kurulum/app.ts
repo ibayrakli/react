@@ -139,14 +139,20 @@ function display(id: number, name: string) {
 // code = false;
 // console.log(code);
 
-let something: any = "Hello";
-something = 45;
-something = true;
-something = {
-  firstName: "Namee",
-  lastName: "Lastname",
-};
-console.log(something);
+// let something: any = "Hello";
+// something = 45;
+// something = true;
+// something = {
+//   firstName: "Namee",
+//   lastName: "Lastname",
+// };
+// console.log(something);
 
-let arr: any[] = ["John", 21, true];
-console.log(arr);
+// let arr: any[] = ["John", 21, true];
+// console.log(arr);
+
+function sayHello(): void {
+  console.log("Hi");
+}
+
+sayHello();
