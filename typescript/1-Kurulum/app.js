@@ -120,3 +120,15 @@ function display(id, name) {
 // }
 // throwError("Hata");
 // let something: void | null = null;
+var sayac = 0;
+console.log(typeof sayac);
+function increment(counter) {
+    return counter++;
+}
+// let a = "something";
+// let b = 123;
+// a = b;
+function sum(a, b) {
+    return a + b;
+}
+var total = sum(3, 10);

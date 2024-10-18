@@ -164,3 +164,20 @@ function display(id: number, name: string) {
 // throwError("Hata");
 
 // let something: void | null = null;
+
+let sayac = 0;
+console.log(typeof sayac);
+
+function increment(counter: number): number {
+  return counter++;
+}
+
+// let a = "something";
+// let b = 123;
+// a = b;
+
+function sum(a: number, b: number) {
+  return a + b;
+}
+
+let total: number = sum(3, 10);
