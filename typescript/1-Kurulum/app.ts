@@ -132,9 +132,21 @@ function display(id: number, name: string) {
 // // console.log(PrintMedia.Newsletter);
 // // console.log(PrintMedia["Book"]);
 
-let code: string | number | boolean;
+// let code: string | number | boolean;
 
-// code = 123;
+// // code = 123;
 
-code = false;
-console.log(code);
+// code = false;
+// console.log(code);
+
+let something: any = "Hello";
+something = 45;
+something = true;
+something = {
+  firstName: "Namee",
+  lastName: "Lastname",
+};
+console.log(something);
+
+let arr: any[] = ["John", 21, true];
+console.log(arr);

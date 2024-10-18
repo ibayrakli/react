@@ -97,7 +97,17 @@ function display(id, name) {
 // }
 // // console.log(PrintMedia.Newsletter);
 // // console.log(PrintMedia["Book"]);
-var code;
-// code = 123;
-code = false;
-console.log(code);
+// let code: string | number | boolean;
+// // code = 123;
+// code = false;
+// console.log(code);
+var something = "Hello";
+something = 45;
+something = true;
+something = {
+    firstName: "Namee",
+    lastName: "Lastname",
+};
+console.log(something);
+var arr = ["John", 21, true];
+console.log(arr);
