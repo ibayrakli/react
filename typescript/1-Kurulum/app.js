@@ -111,7 +111,12 @@ function display(id, name) {
 // console.log(something);
 // let arr: any[] = ["John", 21, true];
 // console.log(arr);
-function sayHello() {
-    console.log("Hi");
-}
-sayHello();
+// function sayHello(): void {
+//   console.log("Hi");
+// }
+// sayHello();
+// function throwError(errorMsg: string): never {
+//   throw new Error(errorMsg);
+// }
+// throwError("Hata");
+// let something: void | null = null;

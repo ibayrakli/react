@@ -151,8 +151,16 @@ function display(id: number, name: string) {
 // let arr: any[] = ["John", 21, true];
 // console.log(arr);
 
-function sayHello(): void {
-  console.log("Hi");
-}
+// function sayHello(): void {
+//   console.log("Hi");
+// }
 
-sayHello();
+// sayHello();
+
+// function throwError(errorMsg: string): never {
+//   throw new Error(errorMsg);
+// }
+
+// throwError("Hata");
+
+// let something: void | null = null;
