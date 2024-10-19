@@ -186,12 +186,27 @@ function display(id: number, name: string) {
 // let empCode = <number>code;
 // console.log(typeof empCode);
 
-interface Employee {
-  name: string;
-  code: number;
-}
+// interface Employee {
+//   name: string;
+//   code: number;
+// }
 
-let employee = <Employee>{};
-console.log(typeof employee);
-employee.name = "Name";
-console.log(employee);
+// let employee = <Employee>{};
+// console.log(typeof employee);
+// employee.name = "Name";
+// console.log(employee);
+
+let x: number = 40;
+let y: number = 25;
+
+// if (x > y) {
+//   console.log("X Y den buyuktur");
+// } else if (x < y) {
+//   console.log("X Y den kucuktur");
+// } else {
+//   console.log("X Y ye esittir");
+// }
+
+x > y
+  ? console.log("X Y den buyuktur")
+  : console.log("X Y den kucuktur veya esittir");
