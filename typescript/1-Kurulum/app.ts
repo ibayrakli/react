@@ -196,17 +196,46 @@ function display(id: number, name: string) {
 // employee.name = "Name";
 // console.log(employee);
 
-let x: number = 40;
-let y: number = 25;
+// let x: number = 40;
+// let y: number = 25;
 
-// if (x > y) {
-//   console.log("X Y den buyuktur");
-// } else if (x < y) {
-//   console.log("X Y den kucuktur");
-// } else {
-//   console.log("X Y ye esittir");
-// }
+// // if (x > y) {
+// //   console.log("X Y den buyuktur");
+// // } else if (x < y) {
+// //   console.log("X Y den kucuktur");
+// // } else {
+// //   console.log("X Y ye esittir");
+// // }
 
-x > y
-  ? console.log("X Y den buyuktur")
-  : console.log("X Y den kucuktur veya esittir");
+// x > y
+//   ? console.log("X Y den buyuktur")
+//   : console.log("X Y den kucuktur veya esittir");
+
+let day: number = 26;
+
+switch (day) {
+  case 0:
+    console.log("Pazar");
+    break;
+  case 1:
+    console.log("Pazartesi");
+    break;
+  case 2:
+    console.log("Sali");
+    break;
+  case 3:
+    console.log("Carsamba");
+    break;
+  case 4:
+    console.log("Persembe");
+    break;
+  case 5:
+    console.log("Cuma");
+    break;
+  case 6:
+    console.log("Cumartesi");
+    break;
+  default:
+    console.log("Boyle bir gun yok");
+    break;
+}
