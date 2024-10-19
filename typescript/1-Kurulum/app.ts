@@ -240,22 +240,36 @@ function display(id: number, name: string) {
 //     break;
 // }
 
-for (let i = 0; i < 3; i++) {
-  console.log("i value:", i);
+// for (let i = 0; i < 3; i++) {
+//   console.log("i value:", i);
+// }
+
+// let arr = [10, 20, 30, 40, 50];
+
+// for (let item of arr) {
+//   console.log(item);
+// }
+
+// let str = "Name Surname";
+
+// for (let item of str) {
+//   console.log(item);
+// }
+
+// for (let item in arr) {
+//   console.log(item);
+// }
+
+let counter = 10;
+
+while (counter < 5) {
+  console.log(counter);
+  counter++;
+
+  if (counter == 3) break;
 }
 
-let arr = [10, 20, 30, 40, 50];
-
-for (let item of arr) {
-  console.log(item);
-}
-
-let str = "Name Surname";
-
-for (let item of str) {
-  console.log(item);
-}
-
-for (let item in arr) {
-  console.log(item);
-}
+do {
+  console.log(counter);
+  counter++;
+} while (counter < 5);
