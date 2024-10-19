@@ -211,31 +211,51 @@ function display(id: number, name: string) {
 //   ? console.log("X Y den buyuktur")
 //   : console.log("X Y den kucuktur veya esittir");
 
-let day: number = 26;
+// let day: number = 26;
 
-switch (day) {
-  case 0:
-    console.log("Pazar");
-    break;
-  case 1:
-    console.log("Pazartesi");
-    break;
-  case 2:
-    console.log("Sali");
-    break;
-  case 3:
-    console.log("Carsamba");
-    break;
-  case 4:
-    console.log("Persembe");
-    break;
-  case 5:
-    console.log("Cuma");
-    break;
-  case 6:
-    console.log("Cumartesi");
-    break;
-  default:
-    console.log("Boyle bir gun yok");
-    break;
+// switch (day) {
+//   case 0:
+//     console.log("Pazar");
+//     break;
+//   case 1:
+//     console.log("Pazartesi");
+//     break;
+//   case 2:
+//     console.log("Sali");
+//     break;
+//   case 3:
+//     console.log("Carsamba");
+//     break;
+//   case 4:
+//     console.log("Persembe");
+//     break;
+//   case 5:
+//     console.log("Cuma");
+//     break;
+//   case 6:
+//     console.log("Cumartesi");
+//     break;
+//   default:
+//     console.log("Boyle bir gun yok");
+//     break;
+// }
+
+for (let i = 0; i < 3; i++) {
+  console.log("i value:", i);
+}
+
+let arr = [10, 20, 30, 40, 50];
+
+for (let item of arr) {
+  console.log(item);
+}
+
+let str = "Name Surname";
+
+for (let item of str) {
+  console.log(item);
+}
+
+for (let item in arr) {
+  console.log(item);
 }

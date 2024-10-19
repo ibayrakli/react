@@ -155,30 +155,46 @@ function display(id, name) {
 // x > y
 //   ? console.log("X Y den buyuktur")
 //   : console.log("X Y den kucuktur veya esittir");
-var day = 26;
-switch (day) {
-    case 0:
-        console.log("Pazar");
-        break;
-    case 1:
-        console.log("Pazartesi");
-        break;
-    case 2:
-        console.log("Sali");
-        break;
-    case 3:
-        console.log("Carsamba");
-        break;
-    case 4:
-        console.log("Persembe");
-        break;
-    case 5:
-        console.log("Cuma");
-        break;
-    case 6:
-        console.log("Cumartesi");
-        break;
-    default:
-        console.log("Boyle bir gun yok");
-        break;
+// let day: number = 26;
+// switch (day) {
+//   case 0:
+//     console.log("Pazar");
+//     break;
+//   case 1:
+//     console.log("Pazartesi");
+//     break;
+//   case 2:
+//     console.log("Sali");
+//     break;
+//   case 3:
+//     console.log("Carsamba");
+//     break;
+//   case 4:
+//     console.log("Persembe");
+//     break;
+//   case 5:
+//     console.log("Cuma");
+//     break;
+//   case 6:
+//     console.log("Cumartesi");
+//     break;
+//   default:
+//     console.log("Boyle bir gun yok");
+//     break;
+// }
+for (var i = 0; i < 3; i++) {
+    console.log("i value:", i);
+}
+var arr = [10, 20, 30, 40, 50];
+for (var _i = 0, arr_1 = arr; _i < arr_1.length; _i++) {
+    var item = arr_1[_i];
+    console.log(item);
+}
+var str = "Name Surname";
+for (var _a = 0, str_1 = str; _a < str_1.length; _a++) {
+    var item = str_1[_a];
+    console.log(item);
+}
+for (var item in arr) {
+    console.log(item);
 }
