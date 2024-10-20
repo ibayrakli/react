@@ -1,6 +1,5 @@
 // console.log("Typescript 1 2 3 5 6");
 // console.log("hello world!");
-
 let age: number = 2025;
 let firstName: string = "Name";
 let isUpdated: boolean = true;
@@ -318,13 +317,23 @@ function display(id: number, name: string) {
 //   return a * b;
 // }
 
-let multiply = (a: number, b: number): number => {
-  return a * b;
-};
+// let multiply = (a: number, b: number): number => {
+//   return a * b;
+// };
 
-let result = multiply(4, 6);
+// let result = multiply(4, 6);
+// console.log(result);
+
+// let printToConsole = () => console.log("print");
+
+// printToConsole();
+
+function add(a: string, b: string): string;
+function add(a: number, b: number): number;
+
+function add(a: any, b: any): any {
+  return a + b;
+}
+
+let result = add(3, 5);
 console.log(result);
-
-let printToConsole = () => console.log("print");
-
-printToConsole();
