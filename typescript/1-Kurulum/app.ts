@@ -260,16 +260,45 @@ function display(id: number, name: string) {
 //   console.log(item);
 // }
 
-let counter = 10;
+// let counter = 10;
 
-while (counter < 5) {
-  console.log(counter);
-  counter++;
+// while (counter < 5) {
+//   console.log(counter);
+//   counter++;
 
-  if (counter == 3) break;
+//   if (counter == 3) break;
+// }
+
+// do {
+//   console.log(counter);
+//   counter++;
+// } while (counter < 5);
+
+// function add(a: number, b: number): number {
+//   return a + b;
+// }
+
+// let sum = add(10, 20);
+// console.log(sum);
+
+// function print() {
+//   console.log("Print print");
+//   return 33;
+// }
+
+// let variable = print();
+// console.log(variable);
+
+// function merge(name: string, surname: string): string {
+//   return name + " " + surname;
+// }
+
+// let merged = merge("Name", "Surname");
+// console.log(merged);
+
+function merge(name: string, surname: string = "Default"): string {
+  return name + " " + surname;
 }
 
-do {
-  console.log(counter);
-  counter++;
-} while (counter < 5);
+let merged = merge("Name", "NoDefault");
+console.log(merged);
