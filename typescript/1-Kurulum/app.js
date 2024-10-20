@@ -222,9 +222,27 @@ function display(id, name) {
 // }
 // let merged = merge("Name", "Surname");
 // console.log(merged);
-function merge(name, surname) {
-    if (surname === void 0) { surname = "Default"; }
-    return name + " " + surname;
-}
-var merged = merge("Name", "NoDefault");
-console.log(merged);
+// function merge(name: string, surname: string = "Default"): string {
+//   return name + " " + surname;
+// }
+// let merged = merge("Name", "NoDefault");
+// console.log(merged);
+// function multiply(a: number, b: number, c?: number) {
+//   console.log(typeof c);
+//   if (typeof c != "undefined") {
+//     return a * b * c;
+//   }
+//   return a * b;
+// }
+// let result = multiply(5, 3);
+// console.log(result);
+// function multiply(a: number, b: number): number {
+//   return a * b;
+// }
+var multiply = function (a, b) {
+    return a * b;
+};
+var result = multiply(4, 6);
+console.log(result);
+var printToConsole = function () { return console.log("print"); };
+printToConsole();

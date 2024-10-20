@@ -296,9 +296,35 @@ function display(id: number, name: string) {
 // let merged = merge("Name", "Surname");
 // console.log(merged);
 
-function merge(name: string, surname: string = "Default"): string {
-  return name + " " + surname;
-}
+// function merge(name: string, surname: string = "Default"): string {
+//   return name + " " + surname;
+// }
 
-let merged = merge("Name", "NoDefault");
-console.log(merged);
+// let merged = merge("Name", "NoDefault");
+// console.log(merged);
+
+// function multiply(a: number, b: number, c?: number) {
+//   console.log(typeof c);
+//   if (typeof c != "undefined") {
+//     return a * b * c;
+//   }
+//   return a * b;
+// }
+
+// let result = multiply(5, 3);
+// console.log(result);
+
+// function multiply(a: number, b: number): number {
+//   return a * b;
+// }
+
+let multiply = (a: number, b: number): number => {
+  return a * b;
+};
+
+let result = multiply(4, 6);
+console.log(result);
+
+let printToConsole = () => console.log("print");
+
+printToConsole();
