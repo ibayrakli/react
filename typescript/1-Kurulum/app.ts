@@ -347,8 +347,28 @@ function display(id: number, name: string) {
 
 // console.log(toplam("Sum", 5, 10, 15));
 
-function merge(message: string, ...names: string[]) {
-  console.log(message + " " + names.join(", "));
+// function merge(message: string, ...names: string[]) {
+//   console.log(message + " " + names.join(", "));
+// }
+
+// merge("Hi", "Firstname", "Middlename", "Surname");
+
+class Person {
+  id: number;
+  firstName: string;
+  lastName: string;
+
+  constructor(id: number, firstName: string, lastName: string) {
+    this.id = id;
+    this.firstName = firstName;
+    this.lastName = lastName;
+  }
+
+  getFullName() {
+    return `${this.firstName} ${this.lastName}`;
+  }
 }
 
-merge("Hi", "Firstname", "Middlename", "Surname");
+let personInfo = new Person(1, "Xxx", "Yyy");
+console.log(personInfo);
+console.log(personInfo.getFullName());

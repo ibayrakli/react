@@ -260,11 +260,21 @@ function display(id, name) {
 //   return total;
 // }
 // console.log(toplam("Sum", 5, 10, 15));
-function merge(message) {
-    var names = [];
-    for (var _i = 1; _i < arguments.length; _i++) {
-        names[_i - 1] = arguments[_i];
+// function merge(message: string, ...names: string[]) {
+//   console.log(message + " " + names.join(", "));
+// }
+// merge("Hi", "Firstname", "Middlename", "Surname");
+var Person = /** @class */ (function () {
+    function Person(id, firstName, lastName) {
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
     }
-    console.log(message + " " + names.join(", "));
-}
-merge("Hi", "Firstname", "Middlename", "Surname");
+    Person.prototype.getFullName = function () {
+        return "".concat(this.firstName, " ").concat(this.lastName);
+    };
+    return Person;
+}());
+var personInfo = new Person(1, "Xxx", "Yyy");
+console.log(personInfo);
+console.log(personInfo.getFullName());
