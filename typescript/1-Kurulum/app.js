@@ -277,4 +277,4 @@ var Person = /** @class */ (function () {
 }());
 var personInfo = new Person(1, "Xxx", "Yyy");
 console.log(personInfo);
-console.log(personInfo.getFullName());
+console.log(personInfo.id);

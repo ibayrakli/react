@@ -354,7 +354,7 @@ function display(id: number, name: string) {
 // merge("Hi", "Firstname", "Middlename", "Surname");
 
 class Person {
-  id: number;
+  public id: number;
   firstName: string;
   lastName: string;
 
@@ -371,4 +371,4 @@ class Person {
 
 let personInfo = new Person(1, "Xxx", "Yyy");
 console.log(personInfo);
-console.log(personInfo.getFullName());
+console.log(personInfo.id);
