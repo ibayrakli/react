@@ -354,7 +354,7 @@ function display(id: number, name: string) {
 // merge("Hi", "Firstname", "Middlename", "Surname");
 
 class Person {
-  readonly id: number;
+  id: number;
   firstName: string;
   lastName: string;
 
@@ -369,6 +369,11 @@ class Person {
   }
 }
 
-let personInfo = new Person(1, "Xxx", "Yyy");
-// personInfo.id = 2;
-console.log(personInfo.id);
+class Employee extends Person {
+  constructor(id: number, firstName: string, lastName: string) {
+    super(id, firstName, lastName);
+  }
+}
+
+let employee = new Employee(2, "Aaa", "Bbbb");
+console.log(employee.getFullName());
