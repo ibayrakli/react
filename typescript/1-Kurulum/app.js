@@ -276,5 +276,5 @@ var Person = /** @class */ (function () {
     return Person;
 }());
 var personInfo = new Person(1, "Xxx", "Yyy");
-console.log(personInfo);
+// personInfo.id = 2;
 console.log(personInfo.id);
