@@ -1,18 +1,3 @@
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        if (typeof b !== "function" && b !== null)
-            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
 // console.log("Typescript 1 2 3 5 6");
 // console.log("hello world!");
 var age = 2025;
@@ -279,23 +264,40 @@ function display(id, name) {
 //   console.log(message + " " + names.join(", "));
 // }
 // merge("Hi", "Firstname", "Middlename", "Surname");
-var Person = /** @class */ (function () {
-    function Person(id, firstName, lastName) {
-        this.id = id;
-        this.firstName = firstName;
-        this.lastName = lastName;
+// class Person {
+//   id: number;
+//   firstName: string;
+//   lastName: string;
+//   constructor(id: number, firstName: string, lastName: string) {
+//     this.id = id;
+//     this.firstName = firstName;
+//     this.lastName = lastName;
+//   }
+//   getFullName() {
+//     return `${this.firstName} ${this.lastName}`;
+//   }
+// }
+// class Employee extends Person {
+//   constructor(id: number, firstName: string, lastName: string) {
+//     super(id, firstName, lastName);
+//   }
+// }
+// let employee = new Employee(2, "Aaa", "Bbbb");
+// console.log(employee.getFullName());
+var Circle = /** @class */ (function () {
+    function Circle() {
+        this.pi = 3;
+        this.pi++;
+        Circle.pi++;
     }
-    Person.prototype.getFullName = function () {
-        return "".concat(this.firstName, " ").concat(this.lastName);
+    Circle.calculate = function (radius) {
+        return this.pi * radius * radius;
     };
-    return Person;
+    Circle.pi = 3.14;
+    return Circle;
 }());
-var Employee = /** @class */ (function (_super) {
-    __extends(Employee, _super);
-    function Employee(id, firstName, lastName) {
-        return _super.call(this, id, firstName, lastName) || this;
-    }
-    return Employee;
-}(Person));
-var employee = new Employee(2, "Aaa", "Bbbb");
-console.log(employee.getFullName());
+var object = new Circle();
+var object2 = new Circle();
+console.log(object.pi);
+console.log(Circle.pi);
+console.log(Circle.calculate(5));

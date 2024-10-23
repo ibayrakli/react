@@ -353,27 +353,49 @@ function display(id: number, name: string) {
 
 // merge("Hi", "Firstname", "Middlename", "Surname");
 
-class Person {
-  id: number;
-  firstName: string;
-  lastName: string;
+// class Person {
+//   id: number;
+//   firstName: string;
+//   lastName: string;
 
-  constructor(id: number, firstName: string, lastName: string) {
-    this.id = id;
-    this.firstName = firstName;
-    this.lastName = lastName;
+//   constructor(id: number, firstName: string, lastName: string) {
+//     this.id = id;
+//     this.firstName = firstName;
+//     this.lastName = lastName;
+//   }
+
+//   getFullName() {
+//     return `${this.firstName} ${this.lastName}`;
+//   }
+// }
+
+// class Employee extends Person {
+//   constructor(id: number, firstName: string, lastName: string) {
+//     super(id, firstName, lastName);
+//   }
+// }
+
+// let employee = new Employee(2, "Aaa", "Bbbb");
+// console.log(employee.getFullName());
+
+class Circle {
+  static pi: number = 3.14;
+  pi = 3;
+
+  constructor() {
+    this.pi++;
+    Circle.pi++;
   }
 
-  getFullName() {
-    return `${this.firstName} ${this.lastName}`;
+  static calculate(radius: number) {
+    return this.pi * radius * radius;
   }
 }
 
-class Employee extends Person {
-  constructor(id: number, firstName: string, lastName: string) {
-    super(id, firstName, lastName);
-  }
-}
+let object = new Circle();
+let object2 = new Circle();
 
-let employee = new Employee(2, "Aaa", "Bbbb");
-console.log(employee.getFullName());
+console.log(object.pi);
+
+console.log(Circle.pi);
+console.log(Circle.calculate(5));
