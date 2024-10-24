@@ -378,24 +378,57 @@ function display(id: number, name: string) {
 // let employee = new Employee(2, "Aaa", "Bbbb");
 // console.log(employee.getFullName());
 
-class Circle {
-  static pi: number = 3.14;
-  pi = 3;
+// class Circle {
+//   static pi: number = 3.14;
+//   pi = 3;
 
-  constructor() {
-    this.pi++;
-    Circle.pi++;
+//   constructor() {
+//     this.pi++;
+//     Circle.pi++;
+//   }
+
+//   static calculate(radius: number) {
+//     return this.pi * radius * radius;
+//   }
+// }
+
+// let object = new Circle();
+// let object2 = new Circle();
+
+// console.log(object.pi);
+
+// console.log(Circle.pi);
+// console.log(Circle.calculate(5));
+
+abstract class Department {
+  constructor(public name: string) {}
+
+  printName(): void {
+    console.log("Departmant name: " + this.name);
   }
 
-  static calculate(radius: number) {
-    return this.pi * radius * radius;
+  abstract printMeeting(): void;
+}
+
+class AccountingDepartment extends Department {
+  constructor() {
+    super("Accounting and Auditing");
+  }
+
+  printMeeting(): void {
+    console.log("Meeting info");
+  }
+
+  generateReports(): void {
+    console.log("Generating accounting reports...");
   }
 }
 
-let object = new Circle();
-let object2 = new Circle();
+let department2: Department;
+department2 = new AccountingDepartment();
+department2.printName();
 
-console.log(object.pi);
-
-console.log(Circle.pi);
-console.log(Circle.calculate(5));
+let department = new AccountingDepartment();
+department.printName();
+department.printMeeting();
+department.generateReports();
