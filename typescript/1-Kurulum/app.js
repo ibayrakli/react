@@ -7,11 +7,17 @@ function display(id, name) {
     console.log("ID =" + id + " Name = " + name);
 }
 function getFullName(person) {
+    if (person.middleName) {
+        return "".concat(person.firstName, " ").concat(person.middleName, " ").concat(person.lastName);
+    }
     return "".concat(person.firstName, " ").concat(person.lastName);
 }
 var person = {
     firstName: "Abc",
     lastName: "Xyz",
-    age: 29,
 };
-console.log(getFullName(person));
+var format;
+format = function (str, isUpper) {
+    return isUpper ? str.toLocaleUpperCase() : str.toLocaleLowerCase();
+};
+console.log(format("Abc Def", true));

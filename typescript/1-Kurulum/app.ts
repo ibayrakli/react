@@ -434,18 +434,33 @@ function display(id: number, name: string) {
 // department.generateReports();
 
 interface Person {
-  firstName: string;
+  readonly firstName: string;
   lastName: string;
+  middleName?: string;
 }
 
 function getFullName(person: Person) {
+  if (person.middleName) {
+    return `${person.firstName} ${person.middleName} ${person.lastName}`;
+  }
   return `${person.firstName} ${person.lastName}`;
 }
 
-let person = {
+let person: Person = {
   firstName: "Abc",
   lastName: "Xyz",
-  age: 29,
 };
 
-console.log(getFullName(person));
+//console.log(getFullName(person));
+
+interface StringFormat {
+  (str: string, isUpper: boolean): string;
+}
+
+let format: StringFormat;
+
+format = function (str: string, isUpper: boolean) {
+  return isUpper ? str.toLocaleUpperCase() : str.toLocaleLowerCase();
+};
+
+console.log(format("Abc Def", true));
