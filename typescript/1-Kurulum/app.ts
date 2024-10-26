@@ -511,39 +511,91 @@ function display(id: number, name: string) {
 // let employee = new Employee(5, "John", "Doe");
 // console.log(employee);
 
-interface BusinessPartner {
-  name: string;
-  credit: number;
+// interface BusinessPartner {
+//   name: string;
+//   credit: number;
+// }
+
+// interface Identity {
+//   name: string;
+//   id: number;
+// }
+
+// interface Contact {
+//   email: string;
+//   phone: string;
+// }
+
+// type Employee = Identity & Contact;
+
+// let person: Employee = {
+//   id: 1,
+//   name: "Jane Doe",
+//   email: "email@email.com",
+//   phone: "123456780",
+// };
+
+// console.log(person);
+
+// type Customer = BusinessPartner & Contact;
+
+// let customer: Customer = {
+//   credit: 100,
+//   email: "email@email.com",
+//   name: "John Doe",
+//   phone: "1234567801",
+// };
+
+// console.log(customer);
+
+type type = string | number;
+
+function add(a: type, b: type) {
+  if (typeof a === "number" && typeof b === "number") {
+    return a + b;
+  }
+
+  if (typeof a === "string" && typeof b === "string") {
+    return a.concat(b);
+  }
+
+  throw new Error("Please enter a valid input");
 }
 
-interface Identity {
-  name: string;
-  id: number;
+console.log(add(5, 6));
+console.log(add("Jane ", " John"));
+console.log(add(5, "Jane"));
+
+class Customer {
+  isCreditAllowed(): boolean {
+    //..
+    return true;
+  }
 }
 
-interface Contact {
-  email: string;
-  phone: string;
+class Supplier {
+  isInShortList(): boolean {
+    //
+    return true;
+  }
 }
 
-type Employee = Identity & Contact;
+type BusinessPartner = Customer | Supplier;
 
-let person: Employee = {
-  id: 1,
-  name: "Jane Doe",
-  email: "email@email.com",
-  phone: "123456780",
-};
+function signContractor(partner: BusinessPartner): string {
+  let message: string = "";
 
-console.log(person);
+  if (partner instanceof Customer) {
+    message = partner.isCreditAllowed()
+      ? "Credit allowed for customer"
+      : "Problem for customer";
+  }
 
-type Customer = BusinessPartner & Contact;
+  if (partner instanceof Supplier) {
+    message = partner.isInShortList()
+      ? "Credit allowed for supplier"
+      : "Problem for supplier";
+  }
 
-let customer: Customer = {
-  credit: 100,
-  email: "email@email.com",
-  name: "John Doe",
-  phone: "1234567801",
-};
-
-console.log(customer);
+  return message;
+}
