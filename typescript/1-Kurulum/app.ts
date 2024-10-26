@@ -433,34 +433,80 @@ function display(id: number, name: string) {
 // department.printMeeting();
 // department.generateReports();
 
-interface Person {
-  readonly firstName: string;
-  lastName: string;
-  middleName?: string;
+// interface Person {
+//   readonly firstName: string;
+//   lastName: string;
+//   middleName?: string;
+// }
+
+// function getFullName(person: Person) {
+//   if (person.middleName) {
+//     return `${person.firstName} ${person.middleName} ${person.lastName}`;
+//   }
+//   return `${person.firstName} ${person.lastName}`;
+// }
+
+// let person: Person = {
+//   firstName: "Abc",
+//   lastName: "Xyz",
+// };
+
+// //console.log(getFullName(person));
+
+// interface StringFormat {
+//   (str: string, isUpper: boolean): string;
+// }
+
+// let format: StringFormat;
+
+// format = function (str: string, isUpper: boolean) {
+//   return isUpper ? str.toLocaleUpperCase() : str.toLocaleLowerCase();
+// };
+
+// console.log(format("Abc Def", true));
+
+// interface IPerson {
+//   name: string;
+//   gender: string;
+// }
+
+// interface IEmployee extends IPerson {
+//   empNumber: number;
+// }
+
+// interface IWorker extends IPerson {
+//   empDepartment: string;
+// }
+
+// let employee: IEmployee = {
+//   empNumber: 1,
+//   gender: "Female",
+//   name: "Jane",
+// };
+
+// let employeeDepartment: IWorker = {
+//   empDepartment: "Software Department",
+//   gender: "Female",
+//   name: "Jane",
+// };
+
+// console.log(employee);
+// console.log(employeeDepartment);
+
+interface IPerson {
+  name: string;
+  gender: string;
 }
 
-function getFullName(person: Person) {
-  if (person.middleName) {
-    return `${person.firstName} ${person.middleName} ${person.lastName}`;
+class Employee implements IPerson {
+  empNumber: number;
+  name: string;
+  gender: string;
+
+  constructor(empNumber: number, name: string, gender: string) {
+    (this.empNumber = empNumber), (this.name = name), (this.gender = gender);
   }
-  return `${person.firstName} ${person.lastName}`;
 }
 
-let person: Person = {
-  firstName: "Abc",
-  lastName: "Xyz",
-};
-
-//console.log(getFullName(person));
-
-interface StringFormat {
-  (str: string, isUpper: boolean): string;
-}
-
-let format: StringFormat;
-
-format = function (str: string, isUpper: boolean) {
-  return isUpper ? str.toLocaleUpperCase() : str.toLocaleLowerCase();
-};
-
-console.log(format("Abc Def", true));
+let employee = new Employee(5, "John", "Doe");
+console.log(employee);
