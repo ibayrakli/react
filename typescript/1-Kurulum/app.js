@@ -6,11 +6,17 @@ var isUpdated = true;
 function display(id, name) {
     console.log("ID =" + id + " Name = " + name);
 }
-var Employee = /** @class */ (function () {
-    function Employee(empNumber, name, gender) {
-        (this.empNumber = empNumber), (this.name = name), (this.gender = gender);
-    }
-    return Employee;
-}());
-var employee = new Employee(5, "John", "Doe");
-console.log(employee);
+var person = {
+    id: 1,
+    name: "Jane Doe",
+    email: "email@email.com",
+    phone: "123456780",
+};
+console.log(person);
+var customer = {
+    credit: 100,
+    email: "email@email.com",
+    name: "John Doe",
+    phone: "1234567801",
+};
+console.log(customer);

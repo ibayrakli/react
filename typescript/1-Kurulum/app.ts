@@ -493,20 +493,57 @@ function display(id: number, name: string) {
 // console.log(employee);
 // console.log(employeeDepartment);
 
-interface IPerson {
+// interface IPerson {
+//   name: string;
+//   gender: string;
+// }
+
+// class Employee implements IPerson {
+//   empNumber: number;
+//   name: string;
+//   gender: string;
+
+//   constructor(empNumber: number, name: string, gender: string) {
+//     (this.empNumber = empNumber), (this.name = name), (this.gender = gender);
+//   }
+// }
+
+// let employee = new Employee(5, "John", "Doe");
+// console.log(employee);
+
+interface BusinessPartner {
   name: string;
-  gender: string;
+  credit: number;
 }
 
-class Employee implements IPerson {
-  empNumber: number;
+interface Identity {
   name: string;
-  gender: string;
-
-  constructor(empNumber: number, name: string, gender: string) {
-    (this.empNumber = empNumber), (this.name = name), (this.gender = gender);
-  }
+  id: number;
 }
 
-let employee = new Employee(5, "John", "Doe");
-console.log(employee);
+interface Contact {
+  email: string;
+  phone: string;
+}
+
+type Employee = Identity & Contact;
+
+let person: Employee = {
+  id: 1,
+  name: "Jane Doe",
+  email: "email@email.com",
+  phone: "123456780",
+};
+
+console.log(person);
+
+type Customer = BusinessPartner & Contact;
+
+let customer: Customer = {
+  credit: 100,
+  email: "email@email.com",
+  name: "John Doe",
+  phone: "1234567801",
+};
+
+console.log(customer);
