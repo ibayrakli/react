@@ -654,34 +654,80 @@ function display(id: number, name: string) {
 
 // console.log(month);
 
-interface Collection<T> {
-  add(o: T): void;
-  remove(o: T): void;
-}
+// interface Collection<T> {
+//   add(o: T): void;
+//   remove(o: T): void;
+// }
 
-class List<T> implements Collection<T> {
-  private items: T[] = [];
+// class List<T> implements Collection<T> {
+//   private items: T[] = [];
 
-  add(o: T): void {
-    this.items.push(o);
-    console.log(this.items);
+//   add(o: T): void {
+//     this.items.push(o);
+//     console.log(this.items);
+//   }
+//   remove(o: T): void {
+//     let index = this.items.indexOf(o);
+
+//     if (index > -1) {
+//       this.items.splice(index, 1);
+//     }
+
+//     console.log(this.items);
+//   }
+// }
+
+// let list = new List<number>();
+
+// for (let i = 0; i < 10; i++) {
+//   list.add(i);
+// }
+
+// list.remove(7);
+// list.remove(2);
+
+class Stack<T> {
+  private elements: T[] = [];
+
+  constructor(private size: number) {}
+
+  isEmpty(): boolean {
+    return this.elements.length === 0;
   }
-  remove(o: T): void {
-    let index = this.items.indexOf(o);
 
-    if (index > -1) {
-      this.items.splice(index, 1);
+  isFull(): boolean {
+    return this.elements.length === this.size;
+  }
+
+  push(element: T): void {
+    if (this.elements.length == this.size) {
+      throw new Error("The stack is overflow!");
+    }
+    this.elements.push(element);
+  }
+
+  pop(): T {
+    if (this.elements.length == 0) {
+      throw new Error("The stack is empty");
     }
 
-    console.log(this.items);
+    return this.elements.pop()!;
   }
 }
 
-let list = new List<number>();
-
-for (let i = 0; i < 10; i++) {
-  list.add(i);
+function randomBetween(low: number, high: number): number {
+  return Math.floor(Math.random() * (high - low + 1) + low);
 }
 
-list.remove(7);
-list.remove(2);
+let numbers = new Stack<number>(5);
+
+while (!numbers.isFull()) {
+  let element = randomBetween(1, 10);
+  console.log(`Push ${element} into the stack`);
+  numbers.push(element);
+}
+
+while (!numbers.isEmpty()) {
+  let element = numbers.pop();
+  console.log(`Pop ${element} from the stack`);
+}
