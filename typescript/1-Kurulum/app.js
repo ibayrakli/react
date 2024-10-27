@@ -1,3 +1,14 @@
+var __assign = (this && this.__assign) || function () {
+    __assign = Object.assign || function(t) {
+        for (var s, i = 1, n = arguments.length; i < n; i++) {
+            s = arguments[i];
+            for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+                t[p] = s[p];
+        }
+        return t;
+    };
+    return __assign.apply(this, arguments);
+};
 // console.log("Typescript 1 2 3 5 6");
 // console.log("hello world!");
 var age = 2025;
@@ -453,27 +464,32 @@ function display(id, name) {
 //   }
 //   return message;
 // }
-function getRandomNumber(items) {
-    var randomIndex = Math.floor(Math.random() * items.length);
-    return items[randomIndex];
-}
-var numbers = [1, 54, 65, 7, 8];
-//console.log(getRandomNumber(numbers));
-function getRandomString(items) {
-    var randomIndex = Math.floor(Math.random() * items.length);
-    return items[randomIndex];
-}
-var names = ["Jane", "John", "Jack"];
-//console.log(getRandomString(names));
-// function getRandomElement(items: any[]): any {
+// function getRandomNumber(items: number[]): number {
 //   let randomIndex = Math.floor(Math.random() * items.length);
 //   return items[randomIndex];
 // }
-var variables = [true, false, true];
-function getRandomElement(items) {
-    var randomIndex = Math.floor(Math.random() * items.length);
-    return items[randomIndex];
+// let numbers = [1, 54, 65, 7, 8];
+// //console.log(getRandomNumber(numbers));
+// function getRandomString(items: string[]): string {
+//   let randomIndex = Math.floor(Math.random() * items.length);
+//   return items[randomIndex];
+// }
+// let names = ["Jane", "John", "Jack"];
+// //console.log(getRandomString(names));
+// // function getRandomElement(items: any[]): any {
+// //   let randomIndex = Math.floor(Math.random() * items.length);
+// //   return items[randomIndex];
+// // }
+// let variables = [true, false, true];
+// function getRandomElement<T>(items: T[]): T {
+//   let randomIndex = Math.floor(Math.random() * items.length);
+//   return items[randomIndex];
+// }
+// console.log(getRandomElement<number>(numbers));
+// console.log(getRandomElement<string>(names));
+// console.log(getRandomElement<boolean>(variables));
+function merge(obj1, obj2) {
+    return __assign(__assign({}, obj1), obj2);
 }
-console.log(getRandomElement(numbers));
-console.log(getRandomElement(names));
-console.log(getRandomElement(variables));
+var person = merge({ name: "Jane" }, { age: 30 });
+console.log(person);

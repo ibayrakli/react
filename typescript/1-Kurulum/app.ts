@@ -600,33 +600,44 @@ function display(id: number, name: string) {
 //   return message;
 // }
 
-function getRandomNumber(items: number[]): number {
-  let randomIndex = Math.floor(Math.random() * items.length);
-  return items[randomIndex];
-}
-
-let numbers = [1, 54, 65, 7, 8];
-//console.log(getRandomNumber(numbers));
-
-function getRandomString(items: string[]): string {
-  let randomIndex = Math.floor(Math.random() * items.length);
-  return items[randomIndex];
-}
-
-let names = ["Jane", "John", "Jack"];
-//console.log(getRandomString(names));
-
-// function getRandomElement(items: any[]): any {
+// function getRandomNumber(items: number[]): number {
 //   let randomIndex = Math.floor(Math.random() * items.length);
 //   return items[randomIndex];
 // }
 
-let variables = [true, false, true];
-function getRandomElement<T>(items: T[]): T {
-  let randomIndex = Math.floor(Math.random() * items.length);
-  return items[randomIndex];
+// let numbers = [1, 54, 65, 7, 8];
+// //console.log(getRandomNumber(numbers));
+
+// function getRandomString(items: string[]): string {
+//   let randomIndex = Math.floor(Math.random() * items.length);
+//   return items[randomIndex];
+// }
+
+// let names = ["Jane", "John", "Jack"];
+// //console.log(getRandomString(names));
+
+// // function getRandomElement(items: any[]): any {
+// //   let randomIndex = Math.floor(Math.random() * items.length);
+// //   return items[randomIndex];
+// // }
+
+// let variables = [true, false, true];
+// function getRandomElement<T>(items: T[]): T {
+//   let randomIndex = Math.floor(Math.random() * items.length);
+//   return items[randomIndex];
+// }
+
+// console.log(getRandomElement<number>(numbers));
+// console.log(getRandomElement<string>(names));
+// console.log(getRandomElement<boolean>(variables));
+
+function merge<U extends object, V extends object>(obj1: U, obj2: V) {
+  return {
+    ...obj1,
+    ...obj2,
+  };
 }
 
-console.log(getRandomElement<number>(numbers));
-console.log(getRandomElement<string>(names));
-console.log(getRandomElement<boolean>(variables));
+let person = merge({ name: "Jane" }, { age: 30 });
+
+console.log(person);
