@@ -3,6 +3,7 @@ import "./App.css";
 import Home from "./components/Home";
 import Instructor from "./components/Instructor";
 import InstructorList from "./components/InstructorList";
+import Request from "./components/Request";
 
 function App() {
   const instructor = {
@@ -30,6 +31,7 @@ function App() {
       <Home name="Welcome" courseNumber={13} isBest={true} />
       <Instructor instructorNameLastName={instructor} />
       <InstructorList instructorNameLastNameList={instructorList} />
+      <Request status="success" />
     </div>
   );
 }
