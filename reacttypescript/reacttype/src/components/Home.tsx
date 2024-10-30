@@ -1,10 +1,5 @@
 import React from "react";
-
-type Data = {
-  name: string;
-  courseNumber: number;
-  isBest: boolean;
-};
+import { Data } from "./propstypes";
 
 function Home(props: Data) {
   return (
