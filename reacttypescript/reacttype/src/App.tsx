@@ -7,6 +7,8 @@ import Request from "./components/Request";
 import EventActions from "./components/EventActions";
 import LoginCheck from "./components/LoginCheck";
 import ReducerExample from "./components/ReducerExample";
+import ContextExample from "./components/ContextExample";
+import { ThemeContextProvider } from "./components/ThemeContext";
 
 function App() {
   const instructor = {
@@ -38,6 +40,10 @@ function App() {
       <EventActions /> */}
       {/* <LoginCheck /> */}
       <ReducerExample />
+      <ThemeContextProvider>
+        {" "}
+        <ContextExample />
+      </ThemeContextProvider>
     </div>
   );
 }
