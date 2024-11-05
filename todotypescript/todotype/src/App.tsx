@@ -2,6 +2,7 @@ import React, { ChangeEvent, FC } from "react";
 import { useState } from "react";
 import "./App.css";
 import { todoType } from "./apptypes";
+import TodoItem from "./TodoItem";
 
 const App: FC = () => {
   const [task, setTask] = useState<string>("");
@@ -19,11 +20,19 @@ const App: FC = () => {
     }
   };
 
-  const addNewTask = () => {
+  const addNewTask = (): void => {
     const newTask = { taskName: task, workDay: workDay };
     setTodoList([...todoList, newTask]);
     setTask("");
     setWorkDay(0);
+  };
+
+  const deleteTask = (nameToDelete: string): void => {
+    setTodoList(
+      todoList.filter((task) => {
+        return task.taskName !== nameToDelete;
+      })
+    );
   };
 
   return (
@@ -44,6 +53,12 @@ const App: FC = () => {
           placeholder="Kaç günde tamamlamalısınız"
         />
         <button onClick={addNewTask}>Yeni Task Ekle</button>
+      </div>
+
+      <div>
+        {todoList.map((task: todoType, index: number) => {
+          return <TodoItem key={index} task={task} deleteTask={deleteTask} />;
+        })}
       </div>
     </div>
   );
