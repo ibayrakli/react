@@ -7,6 +7,7 @@ import { LessonButtonGroup } from "./components/LessonButtonGroup";
 import { LessonTextField } from "./components/LessonTextField";
 import { LessonRadioGroup } from "./components/LessonRadioGroup";
 import { LessonRadioGroupExample } from "./components/LessonRadioGroupExample";
+import { LessonSelect } from "./components/LessonSelect";
 
 function App() {
   return (
@@ -16,7 +17,8 @@ function App() {
       {/* <LessonButtonGroup /> */}
       {/* <LessonTextField /> */}
       {/* <LessonRadioGroup /> */}
-      <LessonRadioGroupExample />
+      {/* <LessonRadioGroupExample /> */}
+      <LessonSelect />
     </div>
   );
 }
