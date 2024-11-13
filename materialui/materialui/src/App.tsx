@@ -9,6 +9,7 @@ import { LessonRadioGroup } from "./components/LessonRadioGroup";
 import { LessonRadioGroupExample } from "./components/LessonRadioGroupExample";
 import { LessonSelect } from "./components/LessonSelect";
 import { LessonCheckbox } from "./components/LessonCheckbox";
+import { LessonAutoComplete } from "./components/LessonAutoComplete";
 
 function App() {
   return (
@@ -20,7 +21,8 @@ function App() {
       {/* <LessonRadioGroup /> */}
       {/* <LessonRadioGroupExample /> */}
       {/* <LessonSelect /> */}
-      <LessonCheckbox />
+      {/* <LessonCheckbox /> */}
+      <LessonAutoComplete />
     </div>
   );
 }
