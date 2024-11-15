@@ -11,6 +11,7 @@ import { LessonSelect } from "./components/LessonSelect";
 import { LessonCheckbox } from "./components/LessonCheckbox";
 import { LessonAutoComplete } from "./components/LessonAutoComplete";
 import { LessonBox } from "./components/LessonBox";
+import { LessonStack } from "./components/LessonStack";
 
 function App() {
   return (
@@ -24,7 +25,8 @@ function App() {
       {/* <LessonSelect /> */}
       {/* <LessonCheckbox /> */}
       {/* <LessonAutoComplete /> */}
-      <LessonBox />
+      {/* <LessonBox /> */}
+      <LessonStack />
     </div>
   );
 }
