@@ -34,6 +34,7 @@ import { LessonSpinner } from "./components/LessonSpinner";
 import { LessonSkeleton } from "./components/LessonSkeleton";
 import { LessonLoadingButton } from "./components/LessonLoadingButton";
 import { LessonTable } from "./components/LessonTable";
+import { LessonDateTime } from "./components/LessonDateTime";
 
 function App() {
   return (
@@ -70,7 +71,8 @@ function App() {
       {/* <LessonSpinner /> */}
       {/* <LessonSkeleton /> */}
       {/* <LessonLoadingButton /> */}
-      <LessonTable />
+      {/* <LessonTable /> */}
+      <LessonDateTime />
     </div>
   );
 }
