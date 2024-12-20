@@ -10,7 +10,7 @@ const courseItems = [
     id: "sadsadsadsadsadsadsad",
     title: "C# Programming",
     price: "69",
-    img: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/C_Sharp_wordmark.svg/768px-C_Sharp_wordmark.svg.png?20190414011151",
+    img: "https://upload.wikimedia.org/wikipedia/commons/f/ff/C-Sharp_Logo.svg",
     quantity: 1,
   },
   {

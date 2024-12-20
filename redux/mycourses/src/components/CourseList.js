@@ -8,20 +8,20 @@ function CourseList() {
   return (
     <>
       {quantity < 1 ? (
-        <section>
+        <section className="card">
           <header>
             <h2>My Basket</h2>
             <h4>Empty</h4>
           </header>
         </section>
       ) : (
-        <section>
+        <section className="card">
           <header>
             <h2>My Basket</h2>
           </header>
           <div>
             {cardItems.map((item) => {
-              return <CourseItem {...item} />;
+              return <CourseItem key={item.id} {...item} />;
             })}
           </div>
           <footer>
@@ -29,7 +29,7 @@ function CourseList() {
             <h4>
               Total Price <span>${total}</span>
             </h4>
-            <button>Clear</button>
+            <button className="cardClear">Clear</button>
           </footer>
         </section>
       )}

@@ -1,3 +1,7 @@
+.App {
+  margin-bottom: 30px;
+}
+
 .navbar {
   display: flex;
   justify-content: space-around;
@@ -21,4 +25,44 @@
   position: absolute;
   bottom: 10px;
   right: 10px;
+}
+
+.card {
+  text-align: center;
+}
+
+.cardClear {
+  padding: 10px;
+  border: none;
+  border-radius: 30px;
+  background-color: blue;
+  color: white;
+}
+
+.cardItem {
+  display: flex;
+  justify-content: space-between;
+  margin: 50px 150px;
+}
+
+.cardInfo {
+  text-align: right;
+}
+
+.cardQuantity {
+  margin-right: 8px;
+}
+
+.cardQuantityButton {
+  border: none;
+  background-color: white;
+}
+
+.cardDeleteButton {
+  padding: 10px;
+  border: none;
+  border-radius: 30px;
+  background-color: red;
+  color: white;
+  margin-top: 50px;
 }
