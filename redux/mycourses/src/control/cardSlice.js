@@ -32,9 +32,22 @@ const cardSlice = createSlice({
 
       if (cardItem.quantity > 0) cardItem.quantity -= 1;
     },
+    calculateTotal: (state) => {
+      let total = 0;
+      let quantity = 0;
+
+      state.cardItems.forEach((item) => {
+        total += item.quantity * item.price;
+        quantity += item.quantity;
+      });
+
+      state.quantity = quantity;
+      state.total = total;
+    },
   },
 });
 
 // console.log(cardSlice);
-export const { clearCard, removeItem, increase, decrease } = cardSlice.actions;
+export const { clearCard, removeItem, increase, decrease, calculateTotal } =
+  cardSlice.actions;
 export default cardSlice.reducer;
