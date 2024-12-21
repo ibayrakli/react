@@ -6,7 +6,7 @@ function CourseItem({ id, title, price, img, quantity }) {
   return (
     <div className="cardItem">
       <img src={img} alt="" width={750} height={422} />
-      <div class="cardInfo">
+      <div className="cardInfo">
         <h4>{title}</h4>
         <h4>${price}</h4>
         <div>

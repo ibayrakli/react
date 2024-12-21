@@ -1,9 +1,12 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import CourseItem from "./CourseItem";
+import { clearCard } from "../control/cardSlice";
 
 function CourseList() {
   const { cardItems, quantity, total } = useSelector((store) => store.card);
+
+  const dispatch = useDispatch();
 
   return (
     <>
@@ -29,7 +32,9 @@ function CourseList() {
             <h4>
               Total Price <span>${total}</span>
             </h4>
-            <button className="cardClear">Clear</button>
+            <button className="cardClear" onClick={() => dispatch(clearCard())}>
+              Clear
+            </button>
           </footer>
         </section>
       )}
